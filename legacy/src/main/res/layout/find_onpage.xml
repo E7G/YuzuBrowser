@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/linearLayout"
-    android:background="@color/deep_gray"
+    android:background="@color/md3_navigation_bar_bg"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
 
     <EditText
         android:id="@+id/findEditText"
         android:layout_width="0dp"
-        android:layout_height="@dimen/general_default_size"
+        android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_weight="1"
-        android:background="#00000000"
+        android:background="@drawable/md3_search_bar_ripple"
+        android:backgroundTint="@color/md3_surface_container_high"
         android:hint="@string/find_on_page"
+        android:textColorHint="#8049454F"
+        android:textColor="@color/md3_on_surface"
+        android:textSize="14sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
         android:inputType="text" />
 
     <TextView
@@ -22,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:textColor="@color/toolbar_text_color" />
+        android:textColor="@color/md3_on_surface_variant" />
 
     <View
         android:layout_marginTop="8dp"
@@ -30,32 +38,32 @@
         android:layout_marginStart="8dp"
         android:layout_width="1dp"
         android:layout_height="match_parent"
-        android:background="?android:attr/listDivider" />
+        android:background="@color/md3_outline_variant" />
 
     <ImageButton
         android:id="@+id/buttonLeft"
         style="@style/ToolbarImageButton"
-        android:layout_width="@dimen/general_default_size"
-        android:layout_height="@dimen/general_default_size"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:scaleType="center"
-        android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
-        android:tint="@color/white" />
+        android:src="@drawable/ic_keyboard_arrow_up_dark_24dp"
+        android:tint="@color/md3_on_surface_variant" />
 
     <ImageButton
         android:id="@+id/buttonRight"
         style="@style/ToolbarImageButton"
-        android:layout_width="@dimen/general_default_size"
-        android:layout_height="@dimen/general_default_size"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:scaleType="center"
-        android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
-        android:tint="@color/white" />
+        android:src="@drawable/ic_keyboard_arrow_down_dark_24dp"
+        android:tint="@color/md3_on_surface_variant" />
 
     <ImageButton
         android:id="@+id/buttonEnd"
         style="@style/ToolbarImageButton"
-        android:layout_width="@dimen/general_default_size"
-        android:layout_height="@dimen/general_default_size"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:scaleType="center"
-        android:src="@drawable/ic_close_black_24dp"
-        android:tint="@color/white" />
+        android:src="@drawable/ic_close_dark_24dp"
+        android:tint="@color/md3_on_surface_variant" />
 </LinearLayout>

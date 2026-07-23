@@ -19,18 +19,20 @@ apply plugin: 'com.github.ben-manes.versions'
 
 buildscript {
     repositories {
+        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://storage.flutter.io/download.flutter.io' }
+        google()
         mavenCentral()
         jcenter()
-        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.2'
-        classpath Dependencies.kotlin_plugin
+        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath Deps.kotlin_plugin
         classpath Dagger.hiltPlugin
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.36.0'
-        classpath 'com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10'
-        classpath 'com.google.gms:google-services:4.3.5'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.5.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -66,9 +68,25 @@ tasks.named("dependencyUpdates").configure {
 
 allprojects {
     repositories {
+        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://storage.flutter.io/download.flutter.io' }
+        google()
         mavenCentral()
         jcenter()
-        google()
+    }
+    configurations.all {
+        resolutionStrategy {
+            force 'androidx.lifecycle:lifecycle-viewmodel:2.5.1'
+            force 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+            force 'androidx.lifecycle:lifecycle-livedata:2.5.1'
+            force 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+            force 'androidx.lifecycle:lifecycle-runtime:2.5.1'
+            force 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+            force 'androidx.lifecycle:lifecycle-common:2.5.1'
+        }
     }
 }
 

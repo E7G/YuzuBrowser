@@ -22,8 +22,10 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceScreen
+import com.google.android.material.appbar.MaterialToolbar
 import dagger.hilt.android.AndroidEntryPoint
 import jp.hazuki.yuzubrowser.core.utility.extensions.getResColor
 import jp.hazuki.yuzubrowser.legacy.R
@@ -56,13 +58,12 @@ class MainSettingsActivity : ThemeActivity(), PreferenceFragmentCompat.OnPrefere
         }
     }
 
-    /**
-     * Set up the [android.app.ActionBar], if the API is available.
-     */
     private fun setupActionBar() {
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
-            setBackgroundDrawable(ColorDrawable(getResColor(R.color.primary)))
+            title = getString(R.string.browser_settings)
         }
     }
 

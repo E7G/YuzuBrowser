@@ -1,81 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright (C) 2017-2019 Hazuki
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~     http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:paddingStart="@dimen/dialog_padding"
-              android:paddingEnd="@dimen/dialog_padding"
-              android:paddingTop="@dimen/dialog_padding_top">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="24dp">
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxBackgroundColor="@color/md3_surface_container_low"
+        app:boxStrokeColor="@color/md3_outline"
+        app:hintTextColor="@color/md3_primary">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/titleEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="@string/title"
-            android:inputType="text">
-
-            <requestFocus />
-        </EditText>
+            android:inputType="text"
+            android:textColor="@color/md3_on_surface"
+            android:textColorHint="@color/md3_on_surface_variant"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxBackgroundColor="@color/md3_surface_container_low"
+        app:boxStrokeColor="@color/md3_outline"
+        app:hintTextColor="@color/md3_primary">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/urlEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="@string/url"
-            android:inputType="textUri" />
+            android:inputType="textUri"
+            android:textColor="@color/md3_on_surface"
+            android:textColorHint="@color/md3_on_surface_variant"/>
 
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <TextView
         android:id="@+id/folderTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/folder"
-        android:textColor="?android:attr/textColorPrimary" />
+        android:textColor="@color/md3_on_surface"
+        android:textAppearance="?attr/textAppearanceLabelLarge"/>
 
     <jp.hazuki.yuzubrowser.ui.widget.SpinnerButton
         android:id="@+id/folderButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp" />
+        android:layout_marginTop="8dp"
+        android:background="@drawable/md3_search_bar_ripple"
+        android:backgroundTint="@color/md3_surface_container_high"
+        android:padding="12dp"/>
 
-    <CheckBox
+    <com.google.android.material.materialswitch.MaterialSwitch
         android:id="@+id/addToTopCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/add_to_top"
-        android:layout_marginTop="4dp"/>
+        android:textColor="@color/md3_on_surface"
+        app:thumbTint="@color/md3_primary"
+        app:trackTint="@color/md3_surface_variant"/>
 
 </LinearLayout>

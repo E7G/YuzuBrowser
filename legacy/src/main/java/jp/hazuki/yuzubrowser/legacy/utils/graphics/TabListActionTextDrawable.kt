@@ -33,7 +33,7 @@ class TabListActionTextDrawable(context: Context, tabs: Int) : Drawable() {
         paint.textSize = context.convertDpToFloatPx(10)
         paint.isAntiAlias = true
         paint.textAlign = Paint.Align.CENTER
-        paint.color = Color.WHITE
+        paint.color = 0xFF49454F.toInt()
         paint.isFakeBoldText = true
     }
 

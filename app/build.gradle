@@ -18,14 +18,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
-apply plugin: 'com.cookpad.android.plugin.license-tools'
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
 
 def gitHash = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
 def buildTime = new Date().format("yyyy-MM-dd'T'HH:mm:ssXXX")
 
 android {
+    namespace 'jp.hazuki.yuzubrowser'
     compileSdkVersion Build.compile_sdk_version
     buildToolsVersion Build.build_tools_version
     defaultConfig {
@@ -56,7 +54,6 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [crashlyticsCollectionEnabled:"true"]
             lintOptions {
                 disable 'MissingTranslation', 'GoogleAppIndexingWarning', 'ClickableViewAccessibility'
             }
@@ -66,7 +63,6 @@ android {
             ext.alwaysUpdateBuildId = false
             applicationIdSuffix ".debug"
             resValue "string", "package_name", "${defaultConfig.applicationId}.debug"
-            manifestPlaceholders = [crashlyticsCollectionEnabled:"false"]
         }
     }
     packagingOptions {
@@ -94,12 +90,6 @@ android {
     }
 }
 
-// must be after the plugin is applied otherwise no tasks will be found
-android.applicationVariants.all { variant ->
-    def googleTask = tasks.findByName("process${variant.name.capitalize()}GoogleServices")
-    googleTask.enabled = "debug" != variant.name
-}
-
 buildscript {
     repositories {
         maven { url 'https://maven.fabric.io/public' }
@@ -108,8 +98,6 @@ buildscript {
     }
 
     dependencies {
-        classpath 'io.fabric.tools:gradle:1.31.2'
-        classpath 'gradle.plugin.com.cookpad.android.plugin:plugin:1.2.6'
     }
 }
 
@@ -150,12 +138,4 @@ dependencies {
 
     implementation Dagger.hilt
     kapt Dagger.hiltCompiler
-
-    // Import the BoM for the Firebase platform
-    implementation platform('com.google.firebase:firebase-bom:26.5.0')
-
-    // Declare the dependencies for the Crashlytics and Analytics libraries
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-crashlytics-ktx'
-    implementation 'com.google.firebase:firebase-analytics-ktx'
 }

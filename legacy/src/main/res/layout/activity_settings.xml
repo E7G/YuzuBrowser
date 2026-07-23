@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/md3_surface">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/md3_surface"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.Material3.Light"
+        app:titleTextColor="@color/md3_on_surface"
+        app:navigationIconTint="@color/md3_on_surface"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
 
     <FrameLayout
         android:id="@+id/container"
-        android:layout_width="@dimen/preference_width"
-        android:layout_height="match_parent"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md3_surface"/>
 
-</FrameLayout>
+</LinearLayout>

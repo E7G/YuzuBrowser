@@ -49,7 +49,6 @@ abstract class UrlBarBase(context: Context, controller: ActionController, iconMa
         centerUrlButton = findViewById(R.id.centerUrlButton)
 
         centerUrlButton.setActionData(softbtnManager.btn_url_center, controller, iconManager)
-        ButtonToolbarController.settingButtonSize(centerUrlButton, toolbarSizeY)
 
         addButtons()
     }

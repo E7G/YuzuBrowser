@@ -77,6 +77,14 @@ class BrowserHistoryFragment : Fragment(), BrowserHistoryAdapter.OnHistoryRecycl
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         val touchScrollBar = view.findViewById<TouchScrollBar>(R.id.touchScrollBar)
 
+        val toolbar = view.findViewById<com.google.android.material.appbar.MaterialToolbar>(R.id.toolbar)
+        if (toolbar != null) {
+            (activity as? androidx.appcompat.app.AppCompatActivity)?.setSupportActionBar(toolbar)
+            (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            toolbar.setNavigationOnClickListener { activity.finish() }
+            toolbar.title = getString(R.string.history)
+        }
+
         pickMode = arguments.getBoolean(PICK_MODE)
 
         val layoutManager = LinearLayoutManager(activity)

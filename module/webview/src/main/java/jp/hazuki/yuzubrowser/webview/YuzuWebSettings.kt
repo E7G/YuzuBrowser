@@ -28,7 +28,7 @@ class YuzuWebSettings(private val origin: WebSettings) {
 
     var appCacheEnabled = false
         set(flag) {
-            origin.setAppCacheEnabled(flag)
+            // setAppCacheEnabled removed in API 33
             field = flag
         }
     var geolocationEnabled = false
@@ -322,13 +322,13 @@ class YuzuWebSettings(private val origin: WebSettings) {
     }
 
     fun setAppCachePath(appCachePath: String) {
-        origin.setAppCachePath(appCachePath)
+        // Removed in API 33, no-op
     }
 
     @Suppress("DEPRECATION")
     @Deprecated("")
     fun setAppCacheMaxSize(appCacheMaxSize: Long) {
-        origin.setAppCacheMaxSize(appCacheMaxSize)
+        // Removed in API 33, no-op
     }
 
     fun setNeedInitialFocus(flag: Boolean) {

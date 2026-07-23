@@ -36,7 +36,7 @@
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:src="@drawable/ic_add_white_24dp"
-        android:tint="?attr/iconColor"
+        android:tint="@color/md3_on_surface_variant"
         android:background="?attr/selectableItemBackground"
         android:contentDescription="@string/new_folder_name" />
 </LinearLayout>

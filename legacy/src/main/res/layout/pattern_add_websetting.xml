@@ -63,7 +63,7 @@
             android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/useragent"
             android:src="@drawable/ic_add_white_24dp"
-            android:tint="?attr/iconColor"
+            android:tint="@color/md3_on_surface_variant"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/uaEditText"/>
 

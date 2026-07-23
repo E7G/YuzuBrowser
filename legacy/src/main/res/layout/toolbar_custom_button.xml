@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jp.hazuki.yuzubrowser.legacy.utils.view.swipebutton.SwipeImageButton xmlns:android="http://schemas.android.com/apk/res/android"
-                                                                      android:id="@+id/button"
-                                                                      style="@style/ToolbarImageButton"
-                                                                      android:layout_width="wrap_content"
-                                                                      android:layout_height="match_parent"
-                                                                      android:scaleType="fitCenter"
-                                                                      android:src="@null"/>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <jp.hazuki.yuzubrowser.legacy.utils.view.swipebutton.SwipeImageButton
+        android:id="@+id/button"
+        style="@style/ToolbarImageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@null"
+        android:padding="12dp"
+        android:background="@drawable/md3_icon_button_bg"/>
+
+</FrameLayout>

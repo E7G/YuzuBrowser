@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Monet Dynamic Colors for Android 12+ -->
+    <color name="md3_primary">@android:color/system_accent1_600</color>
+    <color name="md3_on_primary">@android:color/system_accent1_0</color>
+    <color name="md3_primary_container">@android:color/system_accent1_100</color>
+    <color name="md3_on_primary_container">@android:color/system_accent1_900</color>
+    <color name="md3_secondary">@android:color/system_accent2_600</color>
+    <color name="md3_surface">@android:color/system_neutral1_50</color>
+    <color name="md3_surface_variant">@android:color/system_neutral2_100</color>
+    <color name="md3_surface_container">@android:color/system_neutral1_100</color>
+    <color name="md3_surface_container_high">@android:color/system_neutral1_200</color>
+    <color name="md3_surface_container_low">@android:color/system_neutral1_50</color>
+    <color name="md3_on_surface">@android:color/system_neutral1_900</color>
+    <color name="md3_on_surface_variant">@android:color/system_neutral2_700</color>
+    <color name="md3_outline">@android:color/system_neutral2_500</color>
+    <color name="md3_outline_variant">@android:color/system_neutral2_200</color>
+    <color name="md3_ripple_color">@android:color/system_accent1_100</color>
+    <color name="md3_navigation_bar_bg">@android:color/system_neutral1_50</color>
+    <color name="md3_navigation_bar_active">@android:color/system_accent1_600</color>
+    <color name="md3_navigation_bar_inactive">@android:color/system_neutral2_700</color>
+
+    <color name="deep_gray">@android:color/system_neutral1_100</color>
+    <color name="browserBackground">@android:color/system_neutral1_50</color>
+    <color name="default_nav_color">@android:color/system_neutral1_50</color>
+    <color name="white">#FFFFFF</color>
+    <color name="tab_list_background">@android:color/system_neutral1_50</color>
+    <color name="scroll_bar">@android:color/system_neutral2_400</color>
+    <color name="selected_overlay">@android:color/system_accent1_100</color>
+    <color name="light_border">@android:color/system_neutral2_200</color>
+    <color name="dark_border">@android:color/system_neutral2_400</color>
+    <color name="dark_box">@android:color/system_neutral2_300</color>
+    <color name="toolbar_text_color">@android:color/system_neutral1_900</color>
+    <color name="ripple">@android:color/system_accent1_100</color>
+
+    <!-- Theme colors -->
+    <color name="primary">@android:color/system_accent1_600</color>
+    <color name="primary_dark">@android:color/system_accent1_700</color>
+    <color name="accent">@android:color/system_accent1_600</color>
+    <color name="primary_text">@android:color/system_neutral1_900</color>
+    <color name="secondary_text">@android:color/system_neutral2_700</color>
+    <color name="icons">@android:color/system_neutral2_700</color>
+    <color name="divider">@android:color/system_neutral2_200</color>
+    <color name="content_normal">@android:color/system_neutral2_600</color>
+    <color name="urlBarBoxColor">@android:color/system_neutral1_100</color>
+    <color name="urlBarBoxBorderColor">@android:color/system_neutral2_200</color>
+    <color name="progressBarBackground">@android:color/system_accent1_100</color>
+    <color name="background">@android:color/system_neutral1_50</color>
+    <color name="actionBarIconColor">@android:color/system_neutral2_700</color>
+</resources>

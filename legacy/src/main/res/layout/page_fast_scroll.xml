@@ -37,6 +37,6 @@
         android:layout_height="@dimen/general_default_size"
         android:scaleType="center"
         android:src="@drawable/ic_close_black_24dp"
-        android:tint="@color/white" />
+        android:tint="@color/md3_on_surface" />
 
 </LinearLayout>

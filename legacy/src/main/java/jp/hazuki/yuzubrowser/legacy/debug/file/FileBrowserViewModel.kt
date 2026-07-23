@@ -62,7 +62,10 @@ class FileBrowserViewModel(
         private val root: File
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+            return FileBrowserViewModel(root) as T
+        }
+        override fun <T : ViewModel> create(modelClass: Class<T>, extras: androidx.lifecycle.viewmodel.CreationExtras): T {
             return FileBrowserViewModel(root) as T
         }
     }

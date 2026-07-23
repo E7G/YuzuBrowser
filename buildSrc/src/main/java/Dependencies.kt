@@ -15,10 +15,10 @@
  */
 
 object Build {
-    const val compile_sdk_version = 30
-    const val build_tools_version = "30.0.3"
+    const val compile_sdk_version = 33
+    const val build_tools_version = "33.0.2"
     const val min_sdk_version = 23
-    const val target_sdk_version = 30
+    const val target_sdk_version = 33
 }
 
 object AppVersions {
@@ -28,24 +28,24 @@ object AppVersions {
 
 object Versions {
     const val androidX = "1.0.0"
-    const val appCompat = "1.2.0"
-    const val activityX = "1.2.0"
-    const val androidKTX = "1.3.2"
-    const val fragmentKtx = "1.3.0"
+    const val appCompat = "1.5.1"
+    const val activityX = "1.6.1"
+    const val androidKTX = "1.9.0"
+    const val fragmentKtx = "1.5.5"
     const val recyclerView = "1.1.0"
     const val androidxRoom = "2.2.6"
     const val lifeCycle = "2.3.0"
-    const val material = "1.3.0"
+    const val material = "1.7.0"
     const val support_fix_lib = "1.1.1"
     const val support_constraint_lib = "2.0.4"
     const val documentFile = "1.0.1"
     const val print = "1.0.0"
     const val swipeRefreshLayout = "1.1.0"
-    const val moshi = "1.11.0"
+    const val moshi = "1.14.0"
     const val okhttp = "4.9.1"
     const val okio = "2.10.0"
     const val kvs_schema = "5.1.0"
-    const val kotlin = "1.4.31"
+    const val kotlin = "1.8.22"
     const val kotlin_coroutines = "1.4.2"
     const val junit = "4.13.2"
     const val assertk = "0.23.1"
@@ -123,12 +123,12 @@ object Libs {
     const val re2j = "com.google.re2j:re2j:${Versions.re2j}"
 }
 
-object Dependencies {
+object Deps {
     const val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
 }
 
 object Dagger {
-    private const val hiltVersion = "2.33-beta"
+    private const val hiltVersion = "2.44"
 
     const val hiltPlugin = "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
     const val hilt = "com.google.dagger:hilt-android:$hiltVersion"

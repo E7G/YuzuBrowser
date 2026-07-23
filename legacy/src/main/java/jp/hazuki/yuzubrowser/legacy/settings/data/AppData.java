@@ -180,10 +180,12 @@ public class AppData {
             }
             manager.save(context);
 
-            AppPrefs.toolbar_progress.size.set(4);
+            AppPrefs.toolbar_progress.size.set(3);
+            AppPrefs.toolbar_progress.location.set(ToolbarManager.LOCATION_BOTTOM);
             AppPrefs.toolbar_progress.visibility.setHideWhenEndLoading(true);
             AppPrefs.toolbar_custom1.size.set(42);
             AppPrefs.toolbar_custom1.location.set(ToolbarManager.LOCATION_BOTTOM);
+            AppPrefs.toolbar_url.location.set(ToolbarManager.LOCATION_BOTTOM);
             AppPrefs.toolbar_tab.visibility.setVisible(false);
 
             UserAgentList uaList = new UserAgentList();

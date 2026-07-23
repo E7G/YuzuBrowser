@@ -87,7 +87,7 @@ open class BrowserToolbarManager(
     init {
         binding.apply {
             bottomAlwaysToolbar.background =
-                ColorDrawable(context.getResColor(R.color.deep_gray))
+                ColorDrawable(context.getResColor(R.color.md3_navigation_bar_bg))
 
             bottomAlwaysOverlayToolbarPadding.addOnLayoutChangeListener { _, _, top, _, bottom, _, _, _, _ ->
                 bottomAlwaysOverlayToolbarPadding.height = bottom - top
@@ -199,15 +199,15 @@ open class BrowserToolbarManager(
                 topAlwaysToolbar.setBackgroundColor(themeData.toolbarBackgroundColor)
                 bottomToolbarAlwaysLayout.setBackgroundColor(themeData.toolbarBackgroundColor)
             } else {
-                topToolbar.setBackgroundResource(R.color.deep_gray)
-                bottomOverlayToolbar.setBackgroundResource(R.color.deep_gray)
-                bottomAlwaysOverlayToolbar.setBackgroundResource(R.color.deep_gray)
-                webToolbarLayout.setBackgroundResource(R.color.deep_gray)
-                fixedWebToolbarLayout.setBackgroundResource(R.color.deep_gray)
-                leftToolbar.setBackgroundResource(R.color.deep_gray)
-                rightToolbar.setBackgroundResource(R.color.deep_gray)
-                topAlwaysToolbar.setBackgroundResource(R.color.deep_gray)
-                bottomToolbarAlwaysLayout.setBackgroundResource(R.color.deep_gray)
+                topToolbar.setBackgroundResource(R.color.md3_navigation_bar_bg)
+                bottomOverlayToolbar.setBackgroundResource(R.color.md3_navigation_bar_bg)
+                bottomAlwaysOverlayToolbar.setBackgroundResource(R.color.md3_navigation_bar_bg)
+                webToolbarLayout.setBackgroundResource(R.color.md3_navigation_bar_bg)
+                fixedWebToolbarLayout.setBackgroundResource(R.color.md3_navigation_bar_bg)
+                leftToolbar.setBackgroundResource(R.color.md3_navigation_bar_bg)
+                rightToolbar.setBackgroundResource(R.color.md3_navigation_bar_bg)
+                topAlwaysToolbar.setBackgroundResource(R.color.md3_navigation_bar_bg)
+                bottomToolbarAlwaysLayout.setBackgroundResource(R.color.md3_navigation_bar_bg)
             }
 
             bottomOverlayToolbar.background.alpha = AppPrefs.overlay_bottom_alpha.get()

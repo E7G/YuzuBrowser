@@ -49,7 +49,10 @@ class FileEditViewModel(
 
     class Factory(val file: File) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+            return FileEditViewModel(file) as T
+        }
+        override fun <T : ViewModel> create(modelClass: Class<T>, extras: androidx.lifecycle.viewmodel.CreationExtras): T {
             return FileEditViewModel(file) as T
         }
     }

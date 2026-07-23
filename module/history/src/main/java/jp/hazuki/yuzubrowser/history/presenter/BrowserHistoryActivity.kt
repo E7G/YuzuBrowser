@@ -36,10 +36,6 @@ class BrowserHistoryActivity : ThemeActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_base)
-        supportActionBar?.run {
-            elevation = convertDpToFloatPx(1)
-            setDisplayHomeAsUpEnabled(true)
-        }
 
         var pickMode = false
         var fullscreen = AppPrefs.fullscreen.get()

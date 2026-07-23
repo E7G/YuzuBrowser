@@ -27,6 +27,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -54,7 +55,7 @@ constructor(
 ) : RecyclerView.Adapter<BrowserHistoryAdapter.HistoryHolder>(), StickyHeaderAdapter<BrowserHistoryAdapter.HeaderHolder> {
 
     private val defaultColorFilter = PorterDuffColorFilter(
-        context.getColorFromThemeRes(R.attr.iconColor), PorterDuff.Mode.SRC_ATOP)
+        0xFF49454F.toInt(), PorterDuff.Mode.SRC_ATOP)
 
     private val dateFormat = DateFormat.getLongDateFormat(context)
     @SuppressLint("SimpleDateFormat")
@@ -238,7 +239,7 @@ constructor(
     class HistoryHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val foreground: View = itemView.findViewById(R.id.foreground)
-        val imageButton: ImageButton = itemView.findViewById(R.id.imageButton)
+        val imageButton: ImageView = itemView.findViewById(R.id.imageButton)
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val urlTextView: TextView = itemView.findViewById(R.id.urlTextView)
         val timeTextView: TextView = itemView.findViewById(R.id.timeTextView)
